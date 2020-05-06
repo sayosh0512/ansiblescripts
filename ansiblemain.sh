@@ -9,7 +9,8 @@ echo "decoded text : ${decotext}" >> /home/"${1}"/log.txt
 clonerepo(){
   cd /home/"${1}"/ 
   wget https://raw.githubusercontent.com/sayosh0512/ansibles-wordpress-script/master/ansibleserversetup.sh
-  sudo chown -R "${1}":"${1}" /home/"${1}"/moodleinstall.sh
+  sudo chown -R "${1}":"${1}" /home/"${1}"/ansibleserversetup.sh
+  bash /home/"${1}"/ansibleserversetup.sh 
 }
 
 moodle_install() {
